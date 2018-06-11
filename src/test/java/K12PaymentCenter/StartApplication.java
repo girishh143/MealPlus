@@ -35,10 +35,6 @@ public class StartApplication {
 
         driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), androidCapabilities);
         driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
-//        Thread.sleep(10000);
-//        driver.quit();
-
-//        MobileElement usernameText = (MobileElement) (driver.findElements(By.className("android.widget.EditText"))).get(0);
 
         MobileElement usernameText = (MobileElement) (driver.findElement(By.xpath("//*[@text='Username']")));
         usernameText.sendKeys("judd_p1");
@@ -56,12 +52,13 @@ public class StartApplication {
         settingsButton.click();
         Thread.sleep(3000);
 
-        MobileElement logOutButton = (MobileElement) (driver.findElements(By.className("android.widget.TextView"))).get(6);
-//        MobileElement logOutButton = (MobileElement) (driver.findElement(By.xpath("//*[@text=' Logout ']")));
+        MobileElement logOutButton = (MobileElement) (driver.findElement(By.xpath("//*[@text='Logout']")));
         logOutButton.click();
         Thread.sleep(3000);
 
         Assert.assertTrue(signInButton.isDisplayed(), "login page should be displayed");
+
+        driver.quit();
 
 
     }
