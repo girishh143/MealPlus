@@ -1,4 +1,4 @@
-package amazon;
+package K12PaymentCenter;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
