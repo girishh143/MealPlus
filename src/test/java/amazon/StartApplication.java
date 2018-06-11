@@ -44,11 +44,11 @@ public class StartApplication {
         usernameText.sendKeys("judd_p1");
         driver.hideKeyboard();
 
-        MobileElement passwordText = (MobileElement) (driver.findElements(By.className("android.widget.EditText"))).get(1);
+        MobileElement passwordText = (MobileElement) (driver.findElement(By.xpath("//*[@text='Password']")));
         passwordText.sendKeys("p1");
         driver.hideKeyboard();
 
-        MobileElement signInButton = (MobileElement) (driver.findElements(By.className("android.widget.TextView"))).get(1);
+        MobileElement signInButton = (MobileElement) (driver.findElement(By.xpath("//*[@text=' Sign In ']")));
         signInButton.click();
         Thread.sleep(10000);
 
@@ -56,7 +56,8 @@ public class StartApplication {
         settingsButton.click();
         Thread.sleep(3000);
 
-        MobileElement logOutButton = (MobileElement) (driver.findElements(By.className("android.widget.TextView"))).get(1);
+        MobileElement logOutButton = (MobileElement) (driver.findElements(By.className("android.widget.TextView"))).get(6);
+//        MobileElement logOutButton = (MobileElement) (driver.findElement(By.xpath("//*[@text=' Logout ']")));
         logOutButton.click();
         Thread.sleep(3000);
 
