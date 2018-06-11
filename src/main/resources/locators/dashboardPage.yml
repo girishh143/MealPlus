@@ -1,0 +1,11 @@
+linkMeals : xpath_//*[@text=' MEALS']
+buttonAdd : xpath_//*[@text=' Add ']
+buttonTransfer : xpath_//*[@text=' Transfer ']
+imageCentreProfile
+imageLeftProfile
+imageRightProfile
+buttonExpand
+buttonCollapse
+buttonCartScreen
+buttonSetting
+linkFees : xpath_//*[@text=' FEES']

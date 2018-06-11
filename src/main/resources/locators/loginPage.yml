@@ -1,1 +1,14 @@
 BY_XPATH_USERNAME_TEXTBOX: "XPATH_TBR_//*[@text='Username']"
+
+textboxPassword : xpath_//*[@text='Password']
+buttonSignIn : xpath_//*[@text=' Sign In ']
+linkGetHelp : xpath_//*[@text=' Get Help.']
+textboxUsername : xpath_//*[@text='Username']
+buttonFindAccount : xpath_//*[@text=' Find Account ']
+
+linkGetInstructionsToReset : xpath_//*[@text=' Get instructions to reset.']
+textboxEmailAddress : xpath_//*[@text='E-mail address']
+buttonSendInstructions : xpath_//*[@text=' Send Instructions ']
+
+buttonConnectFacebook : xpath_//*[@text=' Connect with Facebook ']
+linkSignUp : xpath_//*[@text=' Sign Up!']
