@@ -1,14 +1,12 @@
 BY_XPATH_USERNAME_TEXTBOX: "XPATH_TBR_//*[@text='Username']"
+BY_XPATH_PASSWORD_TEXTBOX: "XPATH_TBR_//*[@text='Password']"
+BY_XPATH_SIGNIN_BUTTON: "XPATH_TBR_//*[@text=' Sign In ']"
+BY_XPATH_GETHELP_LINK: "XPATH_TBR_//*[@text=' Get Help.']"
 
-textboxPassword : xpath_//*[@text='Password']
-buttonSignIn : xpath_//*[@text=' Sign In ']
-linkGetHelp : xpath_//*[@text=' Get Help.']
-textboxUsername : xpath_//*[@text='Username']
-buttonFindAccount : xpath_//*[@text=' Find Account ']
+BY_XPATH_FINDACCOUNT_BUTTON: "XPATH_TBR_//*[@text=' Find Account ']"
+BY_XPATH_GETINSTRUCTIONSTORESET_LINK: "XPATH_TBR_//*[@text=' Get instructions to reset.']"
+BY_XPATH_EMAILADDRESS_TEXTBOX : "XPATH_TBR_//*[@text='E-mail address']"
+BY_XPATH_SENDINSTRUCTIONS_BUTTON: "XPATH_TBR_//*[@text=' Send Instructions ']"
 
-linkGetInstructionsToReset : xpath_//*[@text=' Get instructions to reset.']
-textboxEmailAddress : xpath_//*[@text='E-mail address']
-buttonSendInstructions : xpath_//*[@text=' Send Instructions ']
-
-buttonConnectFacebook : xpath_//*[@text=' Connect with Facebook ']
-linkSignUp : xpath_//*[@text=' Sign Up!']
+BY_XPATH_CONNECTFACEBOOK_BUTTON: "XPATH_TBR_//*[@text=' Connect with Facebook ']"
+BY_XPATH_SIGNUP_LINK: "XPATH_TBR_//*[@text=' Sign Up!']"
