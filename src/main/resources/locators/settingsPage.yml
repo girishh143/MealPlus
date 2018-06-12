@@ -1,0 +1,17 @@
+linkProfile : xpath_//*[@text=' Profile']
+imageButtonEdit : Not working this page
+imageButtonDelete :
+textboxSite : Not working
+textboxStudentNumber :Not working
+buttonSave : xpath_//*[@text=' Save ']
+
+
+linkWallet : xpath_//*[@text=' Wallet']
+linkStudents : xpath_//*[@text=' Students']
+linkLogout : xpath_//*[@text=' Logout']
+
+Support:
+linkHelp : xpath_//*[@text=' Help']
+linkContactMyDistrict : xpath_//*[@text=' Contact my District']
+linkTermsOfUses : xpath_//*[@text=' Terms of Uses']
+linkPrivacyPolicy : xpath_//*[@text=' Privacy Policy']
