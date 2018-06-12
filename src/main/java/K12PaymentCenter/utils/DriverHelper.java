@@ -1,4 +1,4 @@
-package K12PaymentCenter;
+package K12PaymentCenter.utils;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;

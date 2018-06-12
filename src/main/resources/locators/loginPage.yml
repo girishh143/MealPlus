@@ -8,5 +8,5 @@ BY_XPATH_GETINSTRUCTIONSTORESET_LINK: "XPATH_TBR_//*[@text=' Get instructions to
 BY_XPATH_EMAILADDRESS_TEXTBOX : "XPATH_TBR_//*[@text='E-mail address']"
 BY_XPATH_SENDINSTRUCTIONS_BUTTON: "XPATH_TBR_//*[@text=' Send Instructions ']"
 
-BY_XPATH_CONNECTFACEBOOK_BUTTON: "XPATH_TBR_//*[@text=' Connect with Facebook ']"
+BY_XPATH_CONNECTWITHFACEBOOK_BUTTON: "XPATH_TBR_//*[@text=' Connect with Facebook ']"
 BY_XPATH_SIGNUP_LINK: "XPATH_TBR_//*[@text=' Sign Up!']"

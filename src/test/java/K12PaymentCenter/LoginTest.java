@@ -1,30 +1,30 @@
 package K12PaymentCenter;
 
 import K12PaymentCenter.pages.DashboardPage;
-import K12PaymentCenter.pages.LoginMainPage;
-import io.appium.java_client.android.AndroidDriver;
-import org.testng.Assert;
+import K12PaymentCenter.pages.LoginPage;
+import K12PaymentCenter.pages.SettingsPage;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
-
 public class LoginTest extends BaseTest {
-    private static AndroidDriver driver;
-//    public AndroidDriver driver;
 
-    @Test(description = "Test Login", groups = {"login"})
-    public void testLogin() throws Exception {
-        LoginMainPage loginPage = LoginPageFactory.getLoginPage(this.driver);
-        DashboardPage dashboardPage = loginPage.loginAs("judd_p1", "p1");
-        Assert.assertTrue(dashboardPage.isLoaded(), "Not able to Login with proper credentials");
+    @Test
+    public void test() throws InterruptedException {
+        Thread.sleep(5000);
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.getUsernameTextbox().sendKeys("judd_p1");
+        loginPage.getPasswordTextbox().sendKeys("p1");
+        loginPage.getSignInButton().click();
+
+        Thread.sleep(5000);
+
+        DashboardPage dashboardPage = new DashboardPage(driver);
+        dashboardPage.getSettingsButton().click();
+
+        Thread.sleep(3000);
+
+        SettingsPage settingsPage = new SettingsPage(driver);
+        settingsPage.getLogoutButton().click();
 
 
-    }
-
-    public static void main(String[] args) throws Exception {
-//        LoginMainPage loginPage = LoginPageFactory.getLoginPage(driver);
-        DashboardPage dashboardPage = LoginMainPage.loginAs("judd_p1", "p1");
-        Assert.assertTrue(dashboardPage.isLoaded(), "Not able to Login with proper credentials");
     }
 }
