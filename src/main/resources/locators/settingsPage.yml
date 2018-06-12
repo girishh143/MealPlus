@@ -8,7 +8,7 @@ buttonSave : xpath_//*[@text=' Save ']
 
 linkWallet : xpath_//*[@text=' Wallet']
 linkStudents : xpath_//*[@text=' Students']
-linkLogout : xpath_//*[@text=' Logout']
+BY_XPATH_LOGOUT_LINK : "XPATH_TBR_//*[@text='Logout']"
 
 Support:
 linkHelp : xpath_//*[@text=' Help']
