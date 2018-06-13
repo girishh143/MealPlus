@@ -5,7 +5,6 @@ BY_XPATH_SITE_TEXTBOX: "XPATH_TBR_//*[@text='Laurel High School']"
 #BY_XPATH_STUDENTNUMBER_TEXTBOX: Not working TextBox
 BY_XPATH_SAVE_BUTTON: "XPATH_TBR_//*[@text=' Save ']"
 
-
 BY_XPATH_WALLET_LINK: "XPATH_TBR_//*[@text='Wallet']"
 BY_XPATH_STUDENTS_LINK: "XPATH_TBR_//*[@text='Students']"
 BY_XPATH_LOGOUT_LINK: "XPATH_TBR_//*[@text='Logout']"
