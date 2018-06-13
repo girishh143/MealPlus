@@ -8,8 +8,9 @@ import org.yaml.snakeyaml.Yaml;
 import java.util.Map;
 
 public class LoginPage {
-    protected Map<String, String> xpaths;
+
     protected AndroidDriver driver;
+
     private MobileElement usernameTextbox;
     private MobileElement passwordTextbox;
     private MobileElement signInButton;
@@ -19,11 +20,12 @@ public class LoginPage {
     private MobileElement emailAddressTextbox;
     private MobileElement sendInstructionsButton;
     private MobileElement signUpLink;
+    private Map<String, String> xpaths;
 
     public LoginPage(AndroidDriver driver) {
         this.driver = driver;
         Yaml loginDataYaml = new Yaml();
-        this.xpaths = (Map) loginDataYaml.load(this.getClass().getClassLoader().getResourceAsStream("loginPage.yml"));
+        this.xpaths = (Map) loginDataYaml.load(this.getClass().getClassLoader().getResourceAsStream("locators/loginPage.yml"));
     }
 
     /**

@@ -15,7 +15,7 @@ public class SettingsPage {
     public SettingsPage(AndroidDriver driver){
         this.driver = driver;
         Yaml dashboardDataYaml = new Yaml();
-        this.xpaths = (Map) dashboardDataYaml.load(this.getClass().getClassLoader().getResourceAsStream("settingsPage.yml"));
+        this.xpaths = (Map) dashboardDataYaml.load(this.getClass().getClassLoader().getResourceAsStream("locators/settingsPage.yml"));
     }
 
     /**
@@ -24,7 +24,7 @@ public class SettingsPage {
      * @return MobileElement representing Settings button
      */
     public MobileElement getLogoutButton() {
-        logoutButton = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_LOGOUT_BUTTON"), this.driver);
+        logoutButton = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_LOGOUT_LINK"), this.driver);
         return logoutButton;
     }
 }

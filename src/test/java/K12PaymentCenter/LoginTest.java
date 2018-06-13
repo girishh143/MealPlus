@@ -15,7 +15,7 @@ public class LoginTest extends BaseTest {
         loginPage.getPasswordTextbox().sendKeys("p1");
         loginPage.getSignInButton().click();
 
-        Thread.sleep(5000);
+        Thread.sleep(10000);
 
         DashboardPage dashboardPage = new DashboardPage(driver);
         dashboardPage.getSettingsButton().click();
