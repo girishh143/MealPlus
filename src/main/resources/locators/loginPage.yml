@@ -5,7 +5,7 @@ BY_XPATH_GETHELP_LINK: "XPATH_TBR_//*[@text=' Get Help.']"
 
 BY_XPATH_FINDACCOUNT_BUTTON: "XPATH_TBR_//*[@text=' Find Account ']"
 BY_XPATH_GETINSTRUCTIONSTORESET_LINK: "XPATH_TBR_//*[@text=' Get instructions to reset.']"
-BY_XPATH_EMAILADDRESS_TEXTBOX : "XPATH_TBR_//*[@text='E-mail address']"
+BY_XPATH_EMAILADDRESS_TEXTBOX: "XPATH_TBR_//*[@text='E-mail address']"
 BY_XPATH_SENDINSTRUCTIONS_BUTTON: "XPATH_TBR_//*[@text=' Send Instructions ']"
 
 BY_XPATH_CONNECTWITHFACEBOOK_BUTTON: "XPATH_TBR_//*[@text=' Connect with Facebook ']"
