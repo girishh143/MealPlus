@@ -49,24 +49,24 @@ public class BaseTest {
     }
 
 
-    /**
-     * Shut down the instance of the web driver and the login factory,
-     * also log out from IQ. The AfterClass Annotation and it has a property
-     * that activate a flag to run always.
-     *
-     * @throws Exception TODO: Change the type of Exception to a more specific
-     */
-    @AfterClass(alwaysRun = true)
-    public void tearDown() throws Exception {
-        // Destroy the browser instance at the end of each test. (Recommended)
-        logger.info("************TEAR DOWN*************");
-
-        if (driver != null) {
-            driver.quit();
-            driver = null;
-            logger.info("Driver was closed successfully");
-        } else {
-            logger.info("Driver is already null");
-        }
-    }
+//    /**
+//     * Shut down the instance of the web driver and the login factory,
+//     * also log out from IQ. The AfterClass Annotation and it has a property
+//     * that activate a flag to run always.
+//     *
+//     * @throws Exception TODO: Change the type of Exception to a more specific
+//     */
+//    @AfterClass(alwaysRun = true)
+//    public void tearDown() throws Exception {
+//        // Destroy the browser instance at the end of each test. (Recommended)
+//        logger.info("************TEAR DOWN*************");
+//
+//        if (driver != null) {
+//            driver.quit();
+//            driver = null;
+//            logger.info("Driver was closed successfully");
+//        } else {
+//            logger.info("Driver is already null");
+//        }
+//    }
 }

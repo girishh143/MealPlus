@@ -20,6 +20,8 @@ public class LoginPage {
     private MobileElement emailAddressTextbox;
     private MobileElement sendInstructionsButton;
     private MobileElement signUpLink;
+    private MobileElement InvalidUserNamePasswordMessage;
+    private MobileElement InvalidUserNamePasswordButton;
     private Map<String, String> xpaths;
 
     public LoginPage(AndroidDriver driver) {
@@ -91,5 +93,15 @@ public class LoginPage {
     public MobileElement getSignUpLink() {
         signUpLink = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_SIGNUP_LINK"), this.driver);
         return signUpLink;
+    }
+
+    public MobileElement getInvalidUserNamePasswordMessage(){
+        InvalidUserNamePasswordMessage=DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_INVALIDUSERNAMEPASSWORD_ERRORMMESSAGE"), this.driver);
+        return InvalidUserNamePasswordMessage;
+    }
+
+    public MobileElement getInvalidUserNamePasswordButton(){
+        InvalidUserNamePasswordButton=DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_INVALIDUSERNAMEPASSWORD_BUTTON"), this.driver);
+        return InvalidUserNamePasswordButton;
     }
 }

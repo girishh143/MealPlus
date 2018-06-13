@@ -10,3 +10,8 @@ BY_XPATH_SENDINSTRUCTIONS_BUTTON: "XPATH_TBR_//*[@text=' Send Instructions ']"
 
 BY_XPATH_CONNECTWITHFACEBOOK_BUTTON: "XPATH_TBR_//*[@text=' Connect with Facebook ']"
 BY_XPATH_SIGNUP_LINK: "XPATH_TBR_//*[@text=' Sign Up!']"
+
+BY_XPATH_INVALIDUSERNAMEPASSWORD_ERRORMMESSAGE: "XPATH_TBR_//*[@text='The user name or password is incorrect.']"
+BY_XPATH_INVALIDUSERNAMEPASSWORD_BUTTON: "XPATH_TBR_//*[@text='OK']"
+
+
