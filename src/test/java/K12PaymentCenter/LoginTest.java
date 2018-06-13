@@ -6,8 +6,8 @@ import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTest {
 
-    @Test
-    public void test() throws InterruptedException {
+    @Test(description = "Verify Login", groups = {"login"})
+    public void testLogin() throws InterruptedException {
         Thread.sleep(5000);
 
         Login();
@@ -22,6 +22,4 @@ public class LoginTest extends BaseTest {
         SettingsPage settingsPage = new SettingsPage(driver);
         settingsPage.getLogoutButton().click();
     }
-
-
 }
