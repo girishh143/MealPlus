@@ -5,12 +5,12 @@ BY_XPATH_SITE_TEXTBOX: "XPATH_TBR_//*[@text='Laurel High School']"
 #BY_XPATH_STUDENTNUMBER_TEXTBOX: Not working TextBox
 BY_XPATH_SAVE_BUTTON: "XPATH_TBR_//*[@text=' Save ']"
 
-BY_XPATH_WALLET_LINK: "XPATH_TBR_//*[@text='Wallet']"
-BY_XPATH_STUDENTS_LINK: "XPATH_TBR_//*[@text='Students']"
-BY_XPATH_LOGOUT_LINK: "XPATH_TBR_//*[@text='Logout']"
+BY_XPATH_WALLET_BUTTON: "XPATH_TBR_//*[@text='Wallet']"
+BY_XPATH_STUDENTS_BUTTON: "XPATH_TBR_//*[@text='Students']"
+BY_XPATH_LOGOUT_BUTTON: "XPATH_TBR_//*[@text='Logout']"
 
 #Support:
-BY_XPATH_HELP_LINK: "XPATH_TBR_//*[@text='Help']"
-BY_XPATH_CONTACTMYDISTRICT_LINK: "XPATH_TBR_//*[@text='Contact my District']"
+BY_XPATH_HELP_BUTTON: "XPATH_TBR_//*[@text='Help']"
+BY_XPATH_CONTACTMYDISTRICT_BUTTON: "XPATH_TBR_//*[@text='Contact my District']"
 BY_XPATH_TERMSOFUSES_LINK: "XPATH_TBR_//*[@text='Terms of Uses']"
 BY_XPATH_PRIVACYPOLICY_LINK: "XPATH_TBR_//*[@text='Privacy Policy']"

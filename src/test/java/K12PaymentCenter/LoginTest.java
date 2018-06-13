@@ -1,7 +1,6 @@
 package K12PaymentCenter;
 
 import K12PaymentCenter.pages.DashboardPage;
-import K12PaymentCenter.pages.LoginPage;
 import K12PaymentCenter.pages.SettingsPage;
 import org.testng.annotations.Test;
 
@@ -24,10 +23,5 @@ public class LoginTest extends BaseTest {
         settingsPage.getLogoutButton().click();
     }
 
-    public void Login() {
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.getUsernameTextbox().sendKeys("judd_p1");
-        loginPage.getPasswordTextbox().sendKeys("p1");
-        loginPage.getSignInButton().click();
-    }
+
 }

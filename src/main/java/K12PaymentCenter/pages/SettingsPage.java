@@ -24,7 +24,7 @@ public class SettingsPage {
      * @return MobileElement representing Settings button
      */
     public MobileElement getLogoutButton() {
-        logoutButton = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_LOGOUT_LINK"), this.driver);
+        logoutButton = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_LOGOUT_BUTTON"), this.driver);
         return logoutButton;
     }
 }

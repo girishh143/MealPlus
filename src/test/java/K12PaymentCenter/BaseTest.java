@@ -1,5 +1,6 @@
 package K12PaymentCenter;
 
+import K12PaymentCenter.pages.LoginPage;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
@@ -38,6 +39,13 @@ public class BaseTest {
         driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), androidCapabilities);
         driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
         return driver;
+    }
+
+    public void Login() {
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.getUsernameTextbox().sendKeys("judd_p1");
+        loginPage.getPasswordTextbox().sendKeys("p1");
+        loginPage.getSignInButton().click();
     }
 
 
