@@ -10,10 +10,8 @@ public class LoginTest extends BaseTest {
     @Test
     public void test() throws InterruptedException {
         Thread.sleep(5000);
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.getUsernameTextbox().sendKeys("judd_p1");
-        loginPage.getPasswordTextbox().sendKeys("p1");
-        loginPage.getSignInButton().click();
+
+        Login();
 
         Thread.sleep(10000);
 
@@ -24,7 +22,12 @@ public class LoginTest extends BaseTest {
 
         SettingsPage settingsPage = new SettingsPage(driver);
         settingsPage.getLogoutButton().click();
+    }
 
-
+    public void Login() {
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.getUsernameTextbox().sendKeys("judd_p1");
+        loginPage.getPasswordTextbox().sendKeys("p1");
+        loginPage.getSignInButton().click();
     }
 }
