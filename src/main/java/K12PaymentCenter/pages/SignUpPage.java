@@ -4,6 +4,9 @@ import K12PaymentCenter.utils.DriverHelper;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.yaml.snakeyaml.Yaml;
 
 import java.util.Map;
@@ -30,6 +33,7 @@ public class SignUpPage {
     private MobileElement finishButton;
     private MobileElement securityQuestion;
     private MobileElement acceptTermsAndConditionsButton;
+    private MobileElement answerTextboxParent;
 
     public SignUpPage(AndroidDriver driver) {
         this.driver = driver;
@@ -43,6 +47,8 @@ public class SignUpPage {
     }
 
     public MobileElement getStateName() {
+        WebDriverWait wait = new WebDriverWait(driver, 60);
+        wait.until(ExpectedConditions.visibilityOf((MobileElement) (driver.findElement(By.xpath(("//*[@text='Alabama']"))))));
         stateName = (MobileElement) (driver.findElements(By.className("android.widget.TextView"))).get(2);
 //        stateName = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_STATENAME"), this.driver);
         return stateName;
@@ -54,6 +60,8 @@ public class SignUpPage {
     }
 
     public MobileElement getDistrictName() {
+        WebDriverWait wait = new WebDriverWait(driver, 60);
+        wait.until(ExpectedConditions.visibilityOf((MobileElement) (driver.findElement(By.xpath(("//*[@text='Anson LZDB']"))))));
         districtName = (MobileElement) (driver.findElements(By.className("android.widget.TextView"))).get(2);
 //        districtName = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_DISTRICT"), this.driver);
         return districtName;
@@ -65,6 +73,8 @@ public class SignUpPage {
     }
 
     public MobileElement getNextButton() {
+        WebDriverWait wait = new WebDriverWait(driver, 60);
+        wait.until(ExpectedConditions.visibilityOf(DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_NEXT_BUTTON"), this.driver)));
         nextButton = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_NEXT_BUTTON"), this.driver);
         return nextButton;
     }
@@ -95,6 +105,8 @@ public class SignUpPage {
     }
 
     public MobileElement getUsernameTextbox() {
+        WebDriverWait wait = new WebDriverWait(driver, 60);
+        wait.until(ExpectedConditions.visibilityOf(DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_USERNAME_TEXTBOX"), this.driver)));
         usernameTextbox = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_USERNAME_TEXTBOX"), this.driver);
         return usernameTextbox;
     }
@@ -115,18 +127,23 @@ public class SignUpPage {
     }
 
     public MobileElement getSecurityQuestion() {
-        securityQuestion = (MobileElement) (driver.findElements(By.className("android.widget.TextView"))).get(2);
+        WebDriverWait wait = new WebDriverWait(driver, 60);
+        wait.until(ExpectedConditions.visibilityOf((MobileElement) (driver.findElement(By.xpath(("//*[@text='What is the name of your best friend from Childhood']"))))));
+        securityQuestion = (MobileElement) (driver.findElements(By.className("android.widget.TextView"))).get(3);
 //        securityQuestion = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_DISTRICT"), this.driver);
         return securityQuestion;
     }
 
     public MobileElement getAnswerTextbox() {
         answerTextbox = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ANSWER_TEXTBOX"), this.driver);
+        answerTextboxParent = (MobileElement) driver.findElement(By.xpath("//*[@text='Answer']/.."));
         return answerTextbox;
     }
 
     public MobileElement getAcceptTermsAndConditionsButton() {
-        acceptTermsAndConditionsButton = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ACCEPT_BUTTON"), this.driver);
+        acceptTermsAndConditionsButton = answerTextboxParent.findElements(By.xpath("//*[@class='android.view.ViewGroup']")).get(2).findElement(By.xpath("//*[@class='android.widget.TextView']"));
+//        acceptTermsAndConditionsButton = (MobileElement) driver.findElements(By.xpath("//*[@class='android.widget.TextView']")).get(2);
+//        acceptTermsAndConditionsButton = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ACCEPT_BUTTON"), this.driver);
         return acceptTermsAndConditionsButton;
     }
 
