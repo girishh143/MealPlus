@@ -14,4 +14,6 @@ BY_XPATH_SIGNUP_LINK: "XPATH_TBR_//*[@text=' Sign Up!']"
 BY_XPATH_INVALIDUSERNAMEPASSWORD_ERRORMMESSAGE: "XPATH_TBR_//*[@text='The user name or password is incorrect.']"
 BY_XPATH_INVALIDUSERNAMEPASSWORD_BUTTON: "XPATH_TBR_//*[@text='OK']"
 
-
+BY_XPATH_FACEBOOKUSERNAME_TEXTBOX: "XPATH_TBR_//*[@text='Email address or phone number']"
+BY_XPATH_FACEBOOKPASSWORD_TEXTBOX: "XPATH_TBR_//*[@text='Facebook password']"
+BY_XPATH_FACEBOOKLOGIN_BUTTON: "XPATH_TBR_//*[@content-desc='Log In ']"
