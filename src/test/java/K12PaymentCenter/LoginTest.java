@@ -9,9 +9,9 @@ import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTest {
 
+    @Test(description = "Verify Login", groups = {"login"})
+    public void testLogin() throws InterruptedException {
 
-  @Test
-    public void test() throws InterruptedException {
         Thread.sleep(5000);
 
         Login();
@@ -54,6 +54,4 @@ public class LoginTest extends BaseTest {
         loginPage.getInvalidUserNamePasswordButton().click();
 
     }
-
-
 }
