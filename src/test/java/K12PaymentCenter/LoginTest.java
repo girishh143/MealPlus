@@ -10,8 +10,8 @@ import org.testng.annotations.Test;
 public class LoginTest extends BaseTest {
 
 
-  @Test
-    public void test() throws InterruptedException {
+    @Test(description = "Verify Login with Valid Credentials", groups = {"login"}, priority = 0)
+    public void testLoginWithValidCredentials() throws InterruptedException {
         Thread.sleep(5000);
 
         Login();
@@ -27,7 +27,7 @@ public class LoginTest extends BaseTest {
         settingsPage.getLogoutButton().click();
     }
 
-    @Test(description = "Verify Login with Invalid Credentials", groups = {"login"})
+    @Test(description = "Verify Login with Invalid Credentials", groups = {"login"}, priority = 1)
     public void testLoginWithInvalidCredentials() throws InterruptedException {
         Thread.sleep(5000);
 
@@ -41,7 +41,7 @@ public class LoginTest extends BaseTest {
 
     }
 
-    @Test(description = "Verify Login with Blank Credentials", groups = {"login"})
+    @Test(description = "Verify Login with Blank Credentials", groups = {"login"}, priority = 2)
     public void testLoginWithBlankCredentials() throws InterruptedException {
         Thread.sleep(5000);
 
@@ -52,6 +52,58 @@ public class LoginTest extends BaseTest {
         loginPage.getSignInButton().click();
 
         loginPage.getInvalidUserNamePasswordButton().click();
+
+    }
+
+    @Test(description = "Verify Login with Invalid Facebook Credentials", groups = {"login"}, priority = 3)
+    public void testLoginWithInvalidFacebookCredentials() throws InterruptedException {
+        Thread.sleep(5000);
+
+        // Login();
+        LoginPage loginPage = new LoginPage(driver);
+
+        loginPage.getConnectWithFacebookButton().click();
+        loginPage.getFacebookUserName().sendKeys("abcd");
+        loginPage.getFacebookPassword().sendKeys("1234");
+        driver.hideKeyboard();
+
+        Thread.sleep(10000);
+        loginPage.getFacebookLoginButton().click();
+
+    }
+
+    @Test(description = "Verify Login with Blank Facebook Credentials", groups = {"login"}, priority = 4)
+    public void testLoginWithBlankFacebookCredentials() throws InterruptedException {
+        Thread.sleep(5000);
+
+        // Login();
+        LoginPage loginPage = new LoginPage(driver);
+
+        loginPage.getConnectWithFacebookButton().click();
+        loginPage.getFacebookUserName().sendKeys("");
+        loginPage.getFacebookPassword().sendKeys("");
+        driver.hideKeyboard();
+
+        Thread.sleep(10000);
+        loginPage.getFacebookLoginButton().click();
+
+    }
+
+
+    @Test(description = "Verify Login with Valid Facebook Credentials", groups = {"login"}, priority = 4)
+    public void testLoginWithValidFacebookCredentials() throws InterruptedException {
+        Thread.sleep(5000);
+
+        // Login();
+        LoginPage loginPage = new LoginPage(driver);
+
+        loginPage.getConnectWithFacebookButton().click();
+        loginPage.getFacebookUserName().sendKeys("8668456899");
+        loginPage.getFacebookPassword().sendKeys("Mealsplus@123");
+        driver.hideKeyboard();
+
+        Thread.sleep(10000);
+        loginPage.getFacebookLoginButton().click();
 
     }
 

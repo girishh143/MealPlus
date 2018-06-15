@@ -5,6 +5,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import org.yaml.snakeyaml.Yaml;
 
+import java.security.PrivateKey;
 import java.util.Map;
 
 public class LoginPage {
@@ -22,6 +23,10 @@ public class LoginPage {
     private MobileElement signUpLink;
     private MobileElement InvalidUserNamePasswordMessage;
     private MobileElement InvalidUserNamePasswordButton;
+    private MobileElement ConnectWithFacebookButton;
+    private MobileElement facebookUserName;
+    private MobileElement facebookPassword;
+    private MobileElement facebookLogin;
     private Map<String, String> xpaths;
 
     public LoginPage(AndroidDriver driver) {
@@ -104,4 +109,20 @@ public class LoginPage {
         InvalidUserNamePasswordButton=DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_INVALIDUSERNAMEPASSWORD_BUTTON"), this.driver);
         return InvalidUserNamePasswordButton;
     }
+
+    public MobileElement getFacebookUserName(){
+        facebookUserName=DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_FACEBOOKUSERNAME_TEXTBOX"), this.driver);
+        return facebookUserName;
+    }
+
+    public MobileElement getFacebookPassword(){
+        facebookPassword=DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_FACEBOOKPASSWORD_TEXTBOX"), this.driver);
+        return facebookPassword;
+    }
+
+    public MobileElement getFacebookLoginButton(){
+        facebookLogin=DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_FACEBOOKLOGIN_BUTTON"), this.driver);
+        return facebookLogin;
+    }
+
 }
