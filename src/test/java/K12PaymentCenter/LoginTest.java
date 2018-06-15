@@ -3,12 +3,9 @@ package K12PaymentCenter;
 import K12PaymentCenter.pages.DashboardPage;
 import K12PaymentCenter.pages.LoginPage;
 import K12PaymentCenter.pages.SettingsPage;
-import io.appium.java_client.MobileElement;
-import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTest {
-
 
     @Test(description = "Verify Login with Valid Credentials", groups = {"login"}, priority = 0)
     public void testLoginWithValidCredentials() throws InterruptedException {
@@ -38,7 +35,6 @@ public class LoginTest extends BaseTest {
         loginPage.getSignInButton().click();
 
         loginPage.getInvalidUserNamePasswordButton().click();
-
     }
 
     @Test(description = "Verify Login with Blank Credentials", groups = {"login"}, priority = 2)
@@ -52,7 +48,6 @@ public class LoginTest extends BaseTest {
         loginPage.getSignInButton().click();
 
         loginPage.getInvalidUserNamePasswordButton().click();
-
     }
 
     @Test(description = "Verify Login with Invalid Facebook Credentials", groups = {"login"}, priority = 3)
@@ -69,7 +64,6 @@ public class LoginTest extends BaseTest {
 
         Thread.sleep(10000);
         loginPage.getFacebookLoginButton().click();
-
     }
 
     @Test(description = "Verify Login with Blank Facebook Credentials", groups = {"login"}, priority = 4)
@@ -86,9 +80,7 @@ public class LoginTest extends BaseTest {
 
         Thread.sleep(10000);
         loginPage.getFacebookLoginButton().click();
-
     }
-
 
     @Test(description = "Verify Login with Valid Facebook Credentials", groups = {"login"}, priority = 4)
     public void testLoginWithValidFacebookCredentials() throws InterruptedException {
@@ -106,6 +98,5 @@ public class LoginTest extends BaseTest {
         loginPage.getFacebookLoginButton().click();
 
     }
-
-
 }
+

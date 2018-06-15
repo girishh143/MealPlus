@@ -5,7 +5,10 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
@@ -13,6 +16,7 @@ import org.testng.annotations.Parameters;
 import org.yaml.snakeyaml.Yaml;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -30,8 +34,9 @@ public class BaseTest {
         DesiredCapabilities androidCapabilities = new DesiredCapabilities();
         androidCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         androidCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "Appium");
-        androidCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554");
-        androidCapabilities.setCapability(MobileCapabilityType.UDID, "emulator-5554");
+        androidCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Sony Xperia Z3");
+//        androidCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554");
+//        androidCapabilities.setCapability(MobileCapabilityType.UDID, "emulator-5554");
         androidCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "8.0");
         androidCapabilities.setCapability("appWaitActivity", "*");
         androidCapabilities.setCapability(MobileCapabilityType.APP, appAndroid.getAbsolutePath());
@@ -47,6 +52,19 @@ public class BaseTest {
         loginPage.getPasswordTextbox().sendKeys("p1");
         loginPage.getSignInButton().click();
     }
+
+//    public boolean isLoaded() throws IOException, InterruptedException {
+//        if (isProgressOverlay()) {
+//            driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+//            return true;
+//        }
+//        return false;
+//    }
+//
+//    public boolean isProgressOverlay() {
+//        WebDriverWait wait = new WebDriverWait(driver, 20);
+//        return wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("android.widget.ProgressBar")));
+//    }
 
 
 //    /**
