@@ -34,9 +34,9 @@ public class BaseTest {
         DesiredCapabilities androidCapabilities = new DesiredCapabilities();
         androidCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         androidCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "Appium");
-        androidCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Sony Xperia Z3");
-//        androidCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554");
-//        androidCapabilities.setCapability(MobileCapabilityType.UDID, "emulator-5554");
+//        androidCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Sony Xperia Z3");
+        androidCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554");
+        androidCapabilities.setCapability(MobileCapabilityType.UDID, "emulator-5554");
         androidCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "8.0");
         androidCapabilities.setCapability("appWaitActivity", "*");
         androidCapabilities.setCapability(MobileCapabilityType.APP, appAndroid.getAbsolutePath());
