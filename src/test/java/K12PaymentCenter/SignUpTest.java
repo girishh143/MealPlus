@@ -2,11 +2,14 @@ package K12PaymentCenter;
 
 import K12PaymentCenter.pages.LoginPage;
 import K12PaymentCenter.pages.SignUpPage;
+import org.apache.http.util.Asserts;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 public class SignUpTest extends BaseTest {
 
@@ -87,22 +90,25 @@ public class SignUpTest extends BaseTest {
 
 
         signUpPage.getFirstNameTextbox().sendKeys("Foo");
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 //        driver.hideKeyboard();
         driver.pressKeyCode(66);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 //        signUpPage.getLastNameTextbox().click();
 //        Thread.sleep(3000);
         signUpPage.getLastNameTextbox().sendKeys("Bar");
-//        driver.hideKeyboard();
-        driver.pressKeyCode(66);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 //        Thread.sleep(3000);
 //        signUpPage.getPhoneNumberTextbox().click();
         signUpPage.getPhoneNumberTextbox().sendKeys("9876543210");
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 //        Thread.sleep(3000);
 //        driver.hideKeyboard();
         driver.pressKeyCode(66);
 //        Thread.sleep(3000);
 //        signUpPage.getEmailTextbox().click();
         signUpPage.getEmailTextbox().sendKeys("foo@bar.com");
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 //        Thread.sleep(3000);
         driver.hideKeyboard();
 //        driver.pressKeyCode(66);
@@ -145,5 +151,33 @@ public class SignUpTest extends BaseTest {
 //        Thread.sleep(3000);
         signUpPage.getFinishButton().click();
 //        Thread.sleep(3000);
+    }
+
+    @Test(description = "Verify State and District selection", groups = {"signUp"})
+    public void testStateDistrict() throws InterruptedException, IOException {
+        WebDriverWait wait = new WebDriverWait(driver, 60);
+        System.out.println("app launched");
+
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.getSignUpLink().click();
+        System.out.println("on sign up page");
+
+        SignUpPage signUpPage = new SignUpPage(driver);
+        wait.until(ExpectedConditions.visibilityOf(signUpPage.getStateDropdown()));
+        signUpPage.getStateDropdown().click();
+        wait.until(ExpectedConditions.visibilityOf(signUpPage.getStateName()));
+        signUpPage.getStateName().click();
+        signUpPage.getDoneButton().click();
+        wait.until(ExpectedConditions.visibilityOf(signUpPage.getDistrictDropdown()));
+        signUpPage.getDistrictDropdown().click();
+        wait.until(ExpectedConditions.visibilityOf(signUpPage.getDistrictName()));
+        signUpPage.getDistrictName().click();
+        signUpPage.getDoneButton().click();
+        wait.until(ExpectedConditions.visibilityOf(signUpPage.getNextButton()));
+        Assert.assertNotEquals(signUpPage.districtDropdown.getText(), "District");
+
+        String warningText = signUpPage.getFeeWarning().getText();
+        String actualWarning = " School Fee Features are not enabled for Anson LZDB.  This district only accepts cafeteria payments through K12PaymentCenter at this time. ";
+        Assert.assertEquals(actualWarning, warningText,"text should match");
     }
 }
