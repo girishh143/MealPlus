@@ -98,5 +98,7 @@ public class LoginTest extends BaseTest {
         loginPage.getFacebookLoginButton().click();
 
     }
+
+
 }
 
