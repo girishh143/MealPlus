@@ -57,7 +57,6 @@ public class StartApplication {
         Thread.sleep(3000);
 
         Assert.assertTrue(signInButton.isDisplayed(), "login page should be displayed");
-
         driver.quit();
 
 

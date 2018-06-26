@@ -74,7 +74,8 @@ public class LoginPage {
     }
 
     public MobileElement getFindAccountButton() {
-        findAccountButton = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_FINDACCOUNT_BUTTON"), this.driver);
+       // findAccountButton = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_FINDACCOUNT_BUTTON"), this.driver);
+        MobileElement findAccountButton = (MobileElement) (driver.findElement(By.xpath("//*[@text=' Find Account ']")));
         return findAccountButton;
     }
 

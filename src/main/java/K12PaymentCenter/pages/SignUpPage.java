@@ -16,7 +16,7 @@ public class SignUpPage {
     protected AndroidDriver driver;
     private MobileElement stateDropdown;
     private MobileElement stateName;
-    private MobileElement districtDropdown;
+    public MobileElement districtDropdown;
     private MobileElement districtName;
     private MobileElement doneButton;
     private MobileElement nextButton;
@@ -34,6 +34,8 @@ public class SignUpPage {
     private MobileElement securityQuestion;
     private MobileElement acceptTermsAndConditionsButton;
     private MobileElement answerTextboxParent;
+    private MobileElement feeWarningTitle;
+    private MobileElement feeWarningText;
 
     public SignUpPage(AndroidDriver driver) {
         this.driver = driver;
@@ -150,5 +152,11 @@ public class SignUpPage {
     public MobileElement getFinishButton() {
         finishButton = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_FINISH_BUTTON"), this.driver);
         return finishButton;
+    }
+
+    public MobileElement getFeeWarning() {
+        feeWarningTitle = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_FEEWARNINGTITLE"), this.driver);
+        feeWarningText = feeWarningTitle.findElements(By.xpath("//*[@class='android.view.ViewGroup']")).get(1).findElements(By.xpath("//*[@class='android.widget.TextView']")).get(1);
+        return feeWarningText;
     }
 }
