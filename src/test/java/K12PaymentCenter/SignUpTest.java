@@ -169,6 +169,32 @@ public class SignUpTest extends BaseTest {
         signUpPage.getStateName().click();
         signUpPage.getDoneButton().click();
         wait.until(ExpectedConditions.visibilityOf(signUpPage.getDistrictDropdown()));
+        System.out.println("State is Selected");
+        signUpPage.getDistrictDropdown().click();
+        wait.until(ExpectedConditions.visibilityOf(signUpPage.getDistrictName()));
+        signUpPage.getDistrictName().click();
+        signUpPage.getDoneButton().click();
+        wait.until(ExpectedConditions.visibilityOf(signUpPage.getNextButton()));
+        Assert.assertNotEquals(signUpPage.districtDropdown.getText(), "District");
+        System.out.println("District is selected");
+    }
+
+    @Test(description = "Verify Meals Account Features and the School Fee Features", groups = {"signUp"})
+    public void testMealsAccountAndSchoolFeeFeatures() throws InterruptedException, IOException {
+        WebDriverWait wait = new WebDriverWait(driver, 60);
+        System.out.println("app launched");
+
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.getSignUpLink().click();
+        System.out.println("on sign up page");
+
+        SignUpPage signUpPage = new SignUpPage(driver);
+        wait.until(ExpectedConditions.visibilityOf(signUpPage.getStateDropdown()));
+        signUpPage.getStateDropdown().click();
+        wait.until(ExpectedConditions.visibilityOf(signUpPage.getStateName()));
+        signUpPage.getStateName().click();
+        signUpPage.getDoneButton().click();
+        wait.until(ExpectedConditions.visibilityOf(signUpPage.getDistrictDropdown()));
         signUpPage.getDistrictDropdown().click();
         wait.until(ExpectedConditions.visibilityOf(signUpPage.getDistrictName()));
         signUpPage.getDistrictName().click();
