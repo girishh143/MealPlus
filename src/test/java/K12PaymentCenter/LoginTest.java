@@ -100,33 +100,5 @@ public class LoginTest extends BaseTest {
 
     }
 
-
-
-
-    @Test(description = "Forgot Password form", groups = {"login"}, priority = 4)
-    public void testForgotPassword() throws InterruptedException {
-        Thread.sleep(5000);
-
-        // Login();
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.getGetHelpLink().click();
-        Thread.sleep(5000);
-        loginPage.getUsernameTextbox().sendKeys("judd1234");
-        driver.hideKeyboard();
-        Thread.sleep(10000);
-        loginPage.getFindAccountButton().click();
-
-        loginPage.getFindAccountButton().click();
-
-      //  loginPage.getConnectWithFacebookButton().click();
-    //    loginPage.getFacebookUserName().sendKeys("8668456899");
-     //   loginPage.getFacebookPassword().sendKeys("Mealsplus@123");
-      //  driver.hideKeyboard();
-
-      //  Thread.sleep(10000);
-     //   loginPage.getFacebookLoginButton().click();
-
-    }
-
 }
 
