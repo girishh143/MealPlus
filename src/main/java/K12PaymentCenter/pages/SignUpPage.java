@@ -48,10 +48,10 @@ public class SignUpPage {
         return stateDropdown;
     }
 
-    public MobileElement getStateName() {
+    public MobileElement getStateName(Integer index) {
         WebDriverWait wait = new WebDriverWait(driver, 60);
         wait.until(ExpectedConditions.visibilityOf((MobileElement) (driver.findElement(By.xpath(("//*[@text='Alabama']"))))));
-        stateName = (MobileElement) (driver.findElements(By.className("android.widget.TextView"))).get(2);
+        stateName = (MobileElement) (driver.findElements(By.className("android.widget.TextView"))).get(index);
 //        stateName = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_STATENAME"), this.driver);
         return stateName;
     }
@@ -61,10 +61,10 @@ public class SignUpPage {
         return districtDropdown;
     }
 
-    public MobileElement getDistrictName() {
+    public MobileElement getDistrictName(Integer index) {
         WebDriverWait wait = new WebDriverWait(driver, 60);
         wait.until(ExpectedConditions.visibilityOf((MobileElement) (driver.findElement(By.xpath(("//*[@text='Anson LZDB']"))))));
-        districtName = (MobileElement) (driver.findElements(By.className("android.widget.TextView"))).get(2);
+        districtName = (MobileElement) (driver.findElements(By.className("android.widget.TextView"))).get(index);
 //        districtName = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_DISTRICT"), this.driver);
         return districtName;
     }
