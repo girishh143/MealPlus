@@ -4,6 +4,9 @@ BY_XPATH_FEES_LINK: "XPATH_TBR_//*[@text='FEES']"
 BY_XPATH_ADD_BUTTON: "XPATH_TBR_//*[@text=' Add ']"
 BY_XPATH_TRANSFER_BUTTON: "XPATH_TBR_//*[@text=' Transfer ']"
 
+BY_XPATH_ADDAMOUNT_TEXTBOX: "XPATH_TBR_//*[@class='android.widget.EditText']"
+BY_XPATH_ADDTOCART_BUTTON: "XPATH_TBR_//*[@text=' Add to cart ']"
+
 #imageCentreProfile
 #imageLeftProfile
 #imageRightProfile
