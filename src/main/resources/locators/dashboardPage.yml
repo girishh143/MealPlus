@@ -1,5 +1,5 @@
-BY_XPATH_MEALS_LINK: "XPATH_TBR_//*[@text=' MEALS']"
-BY_XPATH_FEES_LINK: "XPATH_TBR_//*[@text=' FEES']"
+BY_XPATH_MEALS_LINK: "XPATH_TBR_//*[@text='MEALS']"
+BY_XPATH_FEES_LINK: "XPATH_TBR_//*[@text='FEES']"
 
 BY_XPATH_ADD_BUTTON: "XPATH_TBR_//*[@text=' Add ']"
 BY_XPATH_TRANSFER_BUTTON: "XPATH_TBR_//*[@text=' Transfer ']"
