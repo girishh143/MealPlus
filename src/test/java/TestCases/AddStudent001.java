@@ -21,7 +21,5 @@ public class AddStudent001 extends BaseTest {
 
         SettingsPage settingsPage = new SettingsPage(driver);
         settingsPage.getLogoutButton().click();
-
-
     }
 }
