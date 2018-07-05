@@ -17,7 +17,7 @@ public class LoginPage {
 
     private MobileElement usernameTextbox;
     private MobileElement passwordTextbox;
-    private MobileElement signInButton;
+    public MobileElement signInButton;
     private MobileElement getHelpLink;
     private MobileElement findAccountButton;
     private MobileElement getInstructionsLink;
