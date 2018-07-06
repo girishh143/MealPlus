@@ -10,7 +10,8 @@ import java.util.Map;
 public class SettingsPage {
     protected Map<String, String> xpaths;
     protected AndroidDriver driver;
-    private MobileElement logoutButton;
+    public MobileElement logoutButton;
+    public MobileElement StudentsButton;
 
     public SettingsPage(AndroidDriver driver){
         this.driver = driver;
@@ -27,4 +28,10 @@ public class SettingsPage {
         logoutButton = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_LOGOUT_BUTTON"), this.driver);
         return logoutButton;
     }
+
+    public MobileElement getStudentsButton() {
+        StudentsButton = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_STUDENTS_BUTTON"), this.driver);
+        return StudentsButton;
+    }
+
 }
