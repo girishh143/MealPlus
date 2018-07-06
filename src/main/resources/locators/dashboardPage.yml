@@ -7,6 +7,8 @@ BY_XPATH_TRANSFER_BUTTON: "XPATH_TBR_//*[@text=' Transfer ']"
 BY_XPATH_ADDAMOUNT_TEXTBOX: "XPATH_TBR_//*[@class='android.widget.EditText']"
 BY_XPATH_ADDTOCART_BUTTON: "XPATH_TBR_//*[@text=' Add to cart ']"
 
+BY_XPATH_ADDPAYMENT_SUCCESSMESSAGE: "XPATH_TBR_//*[@text='Shopping cart has been updated']"
+BY_XPATH_ADDPAYMENT_SUCCESSOKBUTTON: "XPATH_TBR_//*[@text='OK']"
 #imageCentreProfile
 #imageLeftProfile
 #imageRightProfile

@@ -17,6 +17,8 @@ public class DashboardPage {
     private MobileElement addButton;
     private MobileElement addAmountTextbox;
     private MobileElement addToCartButton;
+    private MobileElement addPaymentSuccessMessage;
+    private MobileElement addPaymentOkButton;
 
     public DashboardPage(AndroidDriver driver) {
         this.driver = driver;
@@ -57,5 +59,15 @@ public class DashboardPage {
     public MobileElement getAddToCartButton(){
         addToCartButton=DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDTOCART_BUTTON"),this.driver);
         return addToCartButton;
+    }
+
+    public MobileElement getAddPaymentSuccessMessage(){
+        addPaymentSuccessMessage=DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDPAYMENT_SUCCESSMESSAGE"),this.driver);
+        return addPaymentSuccessMessage;
+    }
+
+    public MobileElement getAddPaymentOkButton(){
+        addPaymentOkButton=DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDPAYMENT_SUCCESSOKBUTTON"),this.driver);
+        return addPaymentOkButton;
     }
 }
