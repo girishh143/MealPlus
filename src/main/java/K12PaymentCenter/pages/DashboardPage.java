@@ -13,12 +13,13 @@ import java.util.Map;
 public class DashboardPage {
     protected Map<String, String> xpaths;
     protected AndroidDriver driver;
-    private MobileElement settingsButton;
+    public MobileElement settingsButton;
     private MobileElement addButton;
     private MobileElement addAmountTextbox;
     private MobileElement addToCartButton;
     private MobileElement addPaymentSuccessMessage;
     private MobileElement addPaymentOkButton;
+    public MobileElement backButton;
 
     public DashboardPage(AndroidDriver driver) {
         this.driver = driver;
@@ -70,4 +71,14 @@ public class DashboardPage {
         addPaymentOkButton=DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDPAYMENT_SUCCESSOKBUTTON"),this.driver);
         return addPaymentOkButton;
     }
+
+    public MobileElement getBackButton(){
+        backButton = (MobileElement) (driver.findElements(By.className("android.widget.ImageView"))).get(0);
+        return backButton;
+    }
+
+
+
+
+
 }
