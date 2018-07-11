@@ -13,19 +13,9 @@ import java.util.Map;
 public class DashboardPage {
     protected Map<String, String> xpaths;
     protected AndroidDriver driver;
-<<<<<<< HEAD
     public MobileElement settingsButton;
-    private MobileElement addButton;
-    private MobileElement addAmountTextbox;
-    private MobileElement addToCartButton;
-    private MobileElement addPaymentSuccessMessage;
-    private MobileElement addPaymentOkButton;
     public MobileElement backButton;
     private WebDriverWait wait;
-=======
-    private MobileElement settingsButton;
-
->>>>>>> master
 
     public DashboardPage(AndroidDriver driver) {
         this.driver = driver;
@@ -46,26 +36,11 @@ public class DashboardPage {
         return settingsButton;
     }
 
-<<<<<<< HEAD
-    public MobileElement getAddPaymentSuccessMessage(){
-        addPaymentSuccessMessage=DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDPAYMENT_SUCCESSMESSAGE"),this.driver);
-        return addPaymentSuccessMessage;
-    }
-
-    public MobileElement getAddPaymentOkButton(){
-        addPaymentOkButton=DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDPAYMENT_SUCCESSOKBUTTON"),this.driver);
-        return addPaymentOkButton;
-    }
-
-    public MobileElement getBackButton(){
+    public MobileElement getBackButton() {
+        wait.until(ExpectedConditions.visibilityOf(DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDSTUDENT_BUTTON"), this.driver)));
         backButton = (MobileElement) (driver.findElements(By.className("android.widget.ImageView"))).get(0);
         return backButton;
     }
 
 
-
-
-
-=======
->>>>>>> master
 }
