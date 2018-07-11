@@ -14,67 +14,65 @@ public class AddStudentPage {
 
     protected Map<String, String> xpaths;
     protected AndroidDriver driver;
-    public MobileElement getSaveButton;
-    public MobileElement getLastNameTextbox;
-    public MobileElement getStudentNumberTextbox;
-    public MobileElement getAddStudentInfoMessage;
-    public MobileElement getAddPictureIcon;
+    private MobileElement getSaveButton;
+    private MobileElement getLastNameTextbox;
+    private MobileElement getStudentNumberTextbox;
+    private MobileElement getAddStudentInfoMessage;
+    private MobileElement getAddPictureIcon;
     private MobileElement addStudentSuccessMessage;
     private MobileElement addStudentSuccessOkButton;
+    private WebDriverWait wait;
 
-    public AddStudentPage(AndroidDriver driver){
+
+    public AddStudentPage(AndroidDriver driver) {
         this.driver = driver;
+        wait = new WebDriverWait(this.driver, 90);
         Yaml dashboardDataYaml = new Yaml();
         this.xpaths = (Map) dashboardDataYaml.load(this.getClass().getClassLoader().getResourceAsStream("locators/AddStudentPage.yml"));
     }
 
     public MobileElement getSaveButton() {
-        WebDriverWait wait = new WebDriverWait(this.driver, 60);
+        wait.until(ExpectedConditions.visibilityOf(DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_SAVE_BUTTON"), this.driver)));
         getSaveButton = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_SAVE_BUTTON"), this.driver);
-        wait.until(ExpectedConditions.visibilityOf(getSaveButton));
         return getSaveButton;
     }
 
     public MobileElement getLastNameTextbox() {
-        WebDriverWait wait = new WebDriverWait(this.driver, 60);
+        wait.until(ExpectedConditions.visibilityOf(DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_STUDENTLASTNAME_TEXTBOX"), this.driver)));
         getLastNameTextbox = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_STUDENTLASTNAME_TEXTBOX"), this.driver);
-        wait.until(ExpectedConditions.visibilityOf(getLastNameTextbox));
         return getLastNameTextbox;
     }
 
     public MobileElement getStudentNumberTextbox() {
-        WebDriverWait wait = new WebDriverWait(this.driver, 60);
+        wait.until(ExpectedConditions.visibilityOf(DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_STUDENTNUMBER_TEXTBOX"), this.driver)));
         getStudentNumberTextbox = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_STUDENTNUMBER_TEXTBOX"), this.driver);
-        wait.until(ExpectedConditions.visibilityOf(getStudentNumberTextbox));
         return getStudentNumberTextbox;
     }
 
     public MobileElement getAddStudentInfoMessage() {
-        WebDriverWait wait = new WebDriverWait(this.driver, 60);
+        wait.until(ExpectedConditions.visibilityOf(DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDSTUDENTINFO_MESSAGE"), this.driver)));
         getAddStudentInfoMessage = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDSTUDENTINFO_MESSAGE"), this.driver);
-        wait.until(ExpectedConditions.visibilityOf(getAddStudentInfoMessage));
         return getAddStudentInfoMessage;
     }
 
     public MobileElement getAddPictureIcon() {
-        WebDriverWait wait = new WebDriverWait(this.driver, 60);
+        wait.until(ExpectedConditions.visibilityOf(DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDPICTURE_ICON"), this.driver)));
         getAddPictureIcon = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDPICTURE_ICON"), this.driver);
-        wait.until(ExpectedConditions.visibilityOf(getAddPictureIcon));
         return getAddPictureIcon;
     }
 
     public MobileElement getAddStudentSuccessMessage() {
-        WebDriverWait wait = new WebDriverWait(this.driver, 60);
+        wait.until(ExpectedConditions.visibilityOf(DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDSTUDENTSUCCESS_MESSAGE"), this.driver)));
         addStudentSuccessMessage = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDSTUDENTSUCCESS_MESSAGE"), this.driver);
-        wait.until(ExpectedConditions.visibilityOf(addStudentSuccessMessage));
         return addStudentSuccessMessage;
     }
 
     public MobileElement getAddStudentSuccessOkButton() {
-        WebDriverWait wait = new WebDriverWait(this.driver, 60);
+        wait.until(ExpectedConditions.visibilityOf(DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDSTUDENTSUCCESSOK_BUTTON"), this.driver)));
         addStudentSuccessOkButton = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDSTUDENTSUCCESSOK_BUTTON"), this.driver);
-        wait.until(ExpectedConditions.visibilityOf(addStudentSuccessOkButton));
         return addStudentSuccessOkButton;
     }
+
+
 
 }

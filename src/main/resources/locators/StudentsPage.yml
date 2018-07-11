@@ -1,1 +1,1 @@
-BY_XPATH_ADDSTUDENTS_BUTTON: "XPATH_TBR_//*[@text=' Add Student ']"
+BY_XPATH_ADDSTUDENT_BUTTON: "XPATH_TBR_//*[@text=' Add Student ']"

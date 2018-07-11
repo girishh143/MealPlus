@@ -1,15 +1,7 @@
 BY_XPATH_ADDPICTURE_ICON: "XPATH_TBR_//*[@text='Picture']"
-
 BY_XPATH_STUDENTLASTNAME_TEXTBOX: "XPATH_TBR_//*[@text='Last name']"
-
 BY_XPATH_STUDENTNUMBER_TEXTBOX: "XPATH_TBR_//*[@text='Student number']"
-
 BY_XPATH_ADDSTUDENTINFO_MESSAGE: "XPATH_TBR_//*[@text='Hendry County Schools assigns a unique 8 to 9 digit number to each student.  This number can be found on your student’s schedule or report card.  If you are unable to obtain this number please contact the Child Nutrition Dept. at 555-555-5555 Ext. 555.  Please do not call your student’s school directly.']"
-
 BY_XPATH_SAVE_BUTTON: "XPATH_TBR_//*[@text=' Save ']"
-
 BY_XPATH_ADDSTUDENTSUCCESS_MESSAGE: "XPATH_TBR_//*[@text='Message']"
-
 BY_XPATH_ADDSTUDENTSUCCESSOK_BUTTON: "XPATH_TBR_//*[@text='OK']"
-
-
