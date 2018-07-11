@@ -13,11 +13,23 @@ import java.util.Map;
 public class DashboardPage {
     protected Map<String, String> xpaths;
     protected AndroidDriver driver;
+<<<<<<< HEAD
+    public MobileElement settingsButton;
+    private MobileElement addButton;
+    private MobileElement addAmountTextbox;
+    private MobileElement addToCartButton;
+    private MobileElement addPaymentSuccessMessage;
+    private MobileElement addPaymentOkButton;
+    public MobileElement backButton;
+    private WebDriverWait wait;
+=======
     private MobileElement settingsButton;
 
+>>>>>>> master
 
     public DashboardPage(AndroidDriver driver) {
         this.driver = driver;
+        wait = new WebDriverWait(this.driver, 90);
         Yaml dashboardDataYaml = new Yaml();
         this.xpaths = (Map) dashboardDataYaml.load(this.getClass().getClassLoader().getResourceAsStream("locators/dashboardPage.yml"));
     }
@@ -28,15 +40,32 @@ public class DashboardPage {
      * @return MobileElement representing Settings button
      */
     public MobileElement getSettingsButton() {
-        WebDriverWait wait = new WebDriverWait(this.driver, 90);
-        MobileElement mealsLink = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_MEALS_LINK"), this.driver);
-        wait.until(ExpectedConditions.visibilityOf(mealsLink));
-        MobileElement addButton = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADD_BUTTON"), this.driver);
-        wait.until(ExpectedConditions.visibilityOf(addButton));
-        wait.until(ExpectedConditions.visibilityOf((MobileElement) (driver.findElement(By.className("android.widget.ImageView")))));
+        wait.until(ExpectedConditions.visibilityOf(DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_MEALS_LINK"), this.driver)));
 //        settingsButton = DriverHelper.getMobileElement(this.locators.get("BY_XPATH_SETTINGS_BUTTON"), this.driver);
         settingsButton = (MobileElement) (driver.findElements(By.className("android.widget.ImageView"))).get(2);
         return settingsButton;
     }
 
+<<<<<<< HEAD
+    public MobileElement getAddPaymentSuccessMessage(){
+        addPaymentSuccessMessage=DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDPAYMENT_SUCCESSMESSAGE"),this.driver);
+        return addPaymentSuccessMessage;
+    }
+
+    public MobileElement getAddPaymentOkButton(){
+        addPaymentOkButton=DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDPAYMENT_SUCCESSOKBUTTON"),this.driver);
+        return addPaymentOkButton;
+    }
+
+    public MobileElement getBackButton(){
+        backButton = (MobileElement) (driver.findElements(By.className("android.widget.ImageView"))).get(0);
+        return backButton;
+    }
+
+
+
+
+
+=======
+>>>>>>> master
 }
