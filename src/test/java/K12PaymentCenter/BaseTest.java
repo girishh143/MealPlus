@@ -27,10 +27,12 @@ public class BaseTest {
         androidCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         androidCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "Appium");
 //        androidCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Sony Xperia Z3");
+
        androidCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554");
        androidCapabilities.setCapability(MobileCapabilityType.UDID, "emulator-5554");
      //   androidCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Samsung Galaxy S7");
      //   androidCapabilities.setCapability(MobileCapabilityType.UDID, "ce091609d511db3803");
+
         androidCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "8.0.0");
         androidCapabilities.setCapability("appWaitActivity", "*");
         androidCapabilities.setCapability(MobileCapabilityType.APP, appAndroid.getAbsolutePath());
