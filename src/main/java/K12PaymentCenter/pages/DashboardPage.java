@@ -14,6 +14,8 @@ public class DashboardPage {
     protected Map<String, String> xpaths;
     protected AndroidDriver driver;
     public MobileElement settingsButton;
+    private MobileElement addPaymentSuccessMessage;
+    private MobileElement addPaymentOkButton;
     public MobileElement backButton;
     private WebDriverWait wait;
 
@@ -35,12 +37,10 @@ public class DashboardPage {
         settingsButton = (MobileElement) (driver.findElements(By.className("android.widget.ImageView"))).get(2);
         return settingsButton;
     }
-
     public MobileElement getBackButton() {
         wait.until(ExpectedConditions.visibilityOf(DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDSTUDENT_BUTTON"), this.driver)));
         backButton = (MobileElement) (driver.findElements(By.className("android.widget.ImageView"))).get(0);
         return backButton;
     }
-
-
 }
+
