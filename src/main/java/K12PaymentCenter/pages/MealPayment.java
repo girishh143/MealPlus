@@ -19,18 +19,19 @@ public class MealPayment {
     private MobileElement addToCartButton;
     private MobileElement addPaymentSuccessMessage;
     private MobileElement addPaymentOkButton;
+    private WebDriverWait wait;
 
     public MealPayment(AndroidDriver driver){
         this.driver=driver;
+        wait = new WebDriverWait(this.driver, 90);
         Yaml mealPaymentYML = new Yaml();
         this.xpaths = (Map) mealPaymentYML.load(this.getClass().getClassLoader().getResourceAsStream("locators/MealPayment.yml"));
 
     }
 
     public MobileElement getAddButton(){
-        WebDriverWait wait = new WebDriverWait(this.driver, 90);
+        wait.until(ExpectedConditions.visibilityOf(DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADD_BUTTON"), this.driver)));
         addButton = DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADD_BUTTON"), this.driver);
-        wait.until(ExpectedConditions.visibilityOf(addButton));
         return addButton;
     }
 
@@ -41,16 +42,19 @@ public class MealPayment {
     }
 
     public MobileElement getAddToCartButton(){
+        wait.until(ExpectedConditions.visibilityOf(DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDTOCART_BUTTON"),this.driver)));
         addToCartButton=DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDTOCART_BUTTON"),this.driver);
         return addToCartButton;
     }
 
     public MobileElement getAddPaymentSuccessMessage(){
+        wait.until(ExpectedConditions.visibilityOf(DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDPAYMENT_SUCCESSMESSAGE"),this.driver)));
         addPaymentSuccessMessage=DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDPAYMENT_SUCCESSMESSAGE"),this.driver);
         return addPaymentSuccessMessage;
     }
 
     public MobileElement getAddPaymentOkButton(){
+        wait.until(ExpectedConditions.visibilityOf(DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDPAYMENT_SUCCESSOKBUTTON"),this.driver)));
         addPaymentOkButton=DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDPAYMENT_SUCCESSOKBUTTON"),this.driver);
         return addPaymentOkButton;
     }
