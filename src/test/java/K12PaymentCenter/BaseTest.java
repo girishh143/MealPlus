@@ -45,9 +45,9 @@ public class BaseTest {
     public void Login() {
 
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.getUsernameTextbox().sendKeys("mari");
+        loginPage.getUsernameTextbox().sendKeys("dpk");
         driver.hideKeyboard();
-        loginPage.getPasswordTextbox().sendKeys("Meals@3");
+        loginPage.getPasswordTextbox().sendKeys("Dpk@78");
         driver.hideKeyboard();
         loginPage.getSignInButton().click();
 
