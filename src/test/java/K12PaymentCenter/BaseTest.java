@@ -7,6 +7,7 @@ import io.appium.java_client.remote.MobileCapabilityType;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeClass;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -47,9 +48,11 @@ public class BaseTest {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.getUsernameTextbox().sendKeys("dpk");
         driver.hideKeyboard();
-        loginPage.getPasswordTextbox().sendKeys("Dpk@78");
+        loginPage.getPasswordTextbox().sendKeys("Dpk@789");
         driver.hideKeyboard();
         loginPage.getSignInButton().click();
+        WebDriverWait wait;
+        wait = new WebDriverWait(driver, 90);
 
     }
 
