@@ -34,8 +34,14 @@ public class AddStudentTest extends BaseTest {
         addStudentPage.getSaveButton().click();
         addStudentPage.getAddStudentSuccessOkButton().click();
 
-
+        dashboardPage = new DashboardPage(driver);
         dashboardPage.getSettingsButton().click();
+
+        settingsPage = new SettingsPage(driver);
+        settingsPage.getLogoutButton().click();
+
+
+        //dashboardPage.getSettingsButton().click();
 
 //        SettingsPage settingsPage1 = new SettingsPage(driver);
 //        settingsPage1.getLogoutButton().click();
