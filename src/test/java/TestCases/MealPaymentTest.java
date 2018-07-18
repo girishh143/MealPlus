@@ -45,8 +45,8 @@ public class MealPaymentTest extends BaseTest {
 
     }
 
-    @Test(description = "Verify the User can add d Payment which is in decimal to the cart", groups = {"MealPayment"}, priority = 1)
-    public void testAddPaymentToCartDecimalValue() throws InterruptedException {
+   /* @Test(description = "Verify the User can add d Payment which is in decimal to the cart", groups = {"MealPayment"}, priority = 1)
+   public void testAddPaymentToCartDecimalValue() throws InterruptedException {
         Login();
         // DashboardPage dashboardPage = new DashboardPage(driver);
         MealPayment mealPayment = new MealPayment(driver);
@@ -71,5 +71,5 @@ public class MealPaymentTest extends BaseTest {
         mealPayment.getAddPaymentOkButton().click();
 
 
-    }
+    }*/
 }

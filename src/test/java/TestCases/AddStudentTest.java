@@ -37,6 +37,8 @@ public class AddStudentTest extends BaseTest {
         dashboardPage = new DashboardPage(driver);
         dashboardPage.getSettingsButton().click();
 
+        Thread.sleep(5000);
+
         settingsPage = new SettingsPage(driver);
         settingsPage.getLogoutButton().click();
 

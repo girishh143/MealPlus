@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 public class BaseTest {
 
     private final static Logger logger = Logger.getLogger(BaseTest.class);
-    protected AndroidDriver driver;
+    protected static AndroidDriver driver;
 
     @BeforeClass(alwaysRun = true)
     public AndroidDriver setDriver() throws MalformedURLException {
