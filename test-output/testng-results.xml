@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="170954" started-at="2018-07-18T13:51:38Z" finished-at="2018-07-18T13:54:29Z">
+    <groups>
+      <group name="AddStudentGroup">
+        <method signature="AddStudentTest.testAddVerifiedStudent()[pri:0, instance:TestCases.AddStudentTest@51565ec2]" name="testAddVerifiedStudent" class="TestCases.AddStudentTest"/>
+      </group> <!-- AddStudentGroup -->
+      <group name="MealPayment">
+        <method signature="MealPaymentTest.testAddPaymentToCart()[pri:0, instance:TestCases.MealPaymentTest@482f8f11]" name="testAddPaymentToCart" class="TestCases.MealPaymentTest"/>
+      </group> <!-- MealPayment -->
+    </groups>
+    <test name="Test" duration-ms="170954" started-at="2018-07-18T13:51:38Z" finished-at="2018-07-18T13:54:29Z">
+      <class name="TestCases.MealPaymentTest">
+        <test-method status="PASS" signature="setDriver()[pri:0, instance:TestCases.MealPaymentTest@482f8f11]" name="setDriver" is-config="true" duration-ms="13889" started-at="2018-07-18T19:22:57Z" finished-at="2018-07-18T19:23:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriver -->
+        <test-method status="PASS" signature="testAddPaymentToCart()[pri:0, instance:TestCases.MealPaymentTest@482f8f11]" name="testAddPaymentToCart" duration-ms="77995" started-at="2018-07-18T19:23:11Z" description="Verify the User can add Payment to the cart" finished-at="2018-07-18T19:24:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddPaymentToCart -->
+      </class> <!-- TestCases.MealPaymentTest -->
+      <class name="TestCases.AddStudentTest">
+        <test-method status="PASS" signature="setDriver()[pri:0, instance:TestCases.AddStudentTest@51565ec2]" name="setDriver" is-config="true" duration-ms="10177" started-at="2018-07-18T19:21:38Z" finished-at="2018-07-18T19:21:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriver -->
+        <test-method status="PASS" signature="testAddVerifiedStudent()[pri:0, instance:TestCases.AddStudentTest@51565ec2]" name="testAddVerifiedStudent" duration-ms="68853" started-at="2018-07-18T19:21:49Z" description="Verify the User can add a verified Student." finished-at="2018-07-18T19:22:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddVerifiedStudent -->
+      </class> <!-- TestCases.AddStudentTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
