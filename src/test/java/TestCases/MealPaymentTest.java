@@ -50,7 +50,7 @@ public class MealPaymentTest extends BaseTest {
     }
 
     @Test(description = "Verify the User can add d Payment which is in decimal to the cart", groups = {"MealPayment"}, priority = 1)
-    public void testAddPaymentToCartDecimalValue() throws InterruptedException {
+   public void testAddPaymentToCartDecimalValue() throws InterruptedException {
         Login();
 
         MealPayment mealPayment = new MealPayment(driver);
@@ -87,13 +87,10 @@ public class MealPaymentTest extends BaseTest {
 
         mealPayment.getAddToCartButton().click();
         mealPayment.getAddToCartButton().click();
-
-
         String warningText = mealPayment.getAddPaymentSuccessMessage().getText();
         String actualWarning = "Shopping cart has been updated";
         Assert.assertEquals(actualWarning, warningText, "text should match");
 
         mealPayment.getAddPaymentOkButton().click();
     }
-
 }
