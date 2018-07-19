@@ -92,5 +92,7 @@ public class MealPaymentTest extends BaseTest {
         Assert.assertEquals(actualWarning, warningText, "text should match");
 
         mealPayment.getAddPaymentOkButton().click();
+
+      //  mealPayment.getAddPaymentOkButton().click();
     }
 }
