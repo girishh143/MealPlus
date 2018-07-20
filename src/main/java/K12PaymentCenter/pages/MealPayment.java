@@ -22,6 +22,8 @@ public class MealPayment {
     private WebDriverWait wait;
     private MobileElement addAmount$5Button;
     private MobileElement addAmount$10Button;
+    private MobileElement settingsButton;
+    private MobileElement updateCartButton;
 
     public MealPayment(AndroidDriver driver){
         this.driver=driver;
@@ -71,5 +73,18 @@ public class MealPayment {
         wait.until(ExpectedConditions.visibilityOf(DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDAMOUNT_$10BUTTON"),this.driver)));
         addAmount$10Button=DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDAMOUNT_$10BUTTON"),this.driver);
         return addAmount$10Button;
+    }
+
+    public MobileElement getSettingsButton() {
+        wait.until(ExpectedConditions.visibilityOf(DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADD_BUTTON"), this.driver)));
+//        settingsButton = DriverHelper.getMobileElement(this.locators.get("BY_XPATH_SETTINGS_BUTTON"), this.driver);
+        settingsButton = (MobileElement) (driver.findElements(By.className("android.widget.ImageView"))).get(2);
+        return settingsButton;
+    }
+
+    public MobileElement getUpdateCartButton(){
+        wait.until(ExpectedConditions.visibilityOf(DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_UPDATECART_BUTTON"),this.driver)));
+        updateCartButton=DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_UPDATECART_BUTTON"),this.driver);
+        return updateCartButton;
     }
 }
