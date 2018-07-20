@@ -24,7 +24,7 @@ public class MealPaymentTest extends BaseTest {
         Login();
 
         MealPayment mealPayment = new MealPayment(driver);
-        WebDriverWait wait = new WebDriverWait(this.driver, 90);
+       // WebDriverWait wait = new WebDriverWait(this.driver, 90);
         mealPayment.getAddButton().click();
 
         mealPayment.getAddAmountTextbox().sendKeys("10");
@@ -39,36 +39,59 @@ public class MealPaymentTest extends BaseTest {
 
         mealPayment.getAddPaymentOkButton().click();
 
-        //     wait.until(ExpectedConditions.visibilityOf(mealPayment.getAddButton()));
-       // mealPayment.getAddButton().click();
+      //  DashboardPage dashboardPage = new DashboardPage(driver);
+      //  dashboardPage.getSettingsButton().click();
+
+      //  SettingsPage settingsPage = new SettingsPage(driver);
+     //   settingsPage.getLogoutButton().click();
+
 
     }
 
-   /* @Test(description = "Verify the User can add d Payment which is in decimal to the cart", groups = {"MealPayment"}, priority = 1)
+    @Test(description = "Verify the User can add d Payment which is in decimal to the cart", groups = {"MealPayment"}, priority = 1)
    public void testAddPaymentToCartDecimalValue() throws InterruptedException {
         Login();
-        // DashboardPage dashboardPage = new DashboardPage(driver);
+
         MealPayment mealPayment = new MealPayment(driver);
-        WebDriverWait wait = new WebDriverWait(this.driver, 90);
-        wait.until(ExpectedConditions.visibilityOf(mealPayment.getAddButton()));
         mealPayment.getAddButton().click();
 
         mealPayment.getAddAmountTextbox().sendKeys("20.5");
         driver.hideKeyboard();
-        //   Thread.sleep(5000);
-        wait.until(ExpectedConditions.visibilityOf(mealPayment.getAddToCartButton()));
 
         mealPayment.getAddToCartButton().click();
         mealPayment.getAddToCartButton().click();
 
-        wait.until(ExpectedConditions.visibilityOf(mealPayment.getAddPaymentSuccessMessage()));
         String warningText = mealPayment.getAddPaymentSuccessMessage().getText();
         String actualWarning = "Shopping cart has been updated";
         Assert.assertEquals(actualWarning, warningText, "text should match");
 
-        wait.until(ExpectedConditions.visibilityOf(mealPayment.getAddPaymentOkButton()));
+        mealPayment.getAddPaymentOkButton().click();
+    }
+
+    @Test(description = "Verify the User can add +$5 and +$10 to the amount using the options.", groups = {"MealPayment"}, priority = 2)
+    public void testAddPaymentToCartUsingOptions() throws InterruptedException {
+        Login();
+        WebDriverWait wait = new WebDriverWait(this.driver, 90);
+        MealPayment mealPayment = new MealPayment(driver);
+        mealPayment.getAddButton().click();
+
+        mealPayment.getAddAmountTextbox().sendKeys("30");
+        driver.hideKeyboard();
+
+        mealPayment.getAddAmount$5Button().click();
+        mealPayment.getAddAmount$5Button().click();
+
+        mealPayment.getAddAmount$10Button().click();
+     //   mealPayment.getAddAmount$10Button().click();
+
+        mealPayment.getAddToCartButton().click();
+        mealPayment.getAddToCartButton().click();
+        String warningText = mealPayment.getAddPaymentSuccessMessage().getText();
+        String actualWarning = "Shopping cart has been updated";
+        Assert.assertEquals(actualWarning, warningText, "text should match");
+
         mealPayment.getAddPaymentOkButton().click();
 
-
-    }*/
+      //  mealPayment.getAddPaymentOkButton().click();
+    }
 }

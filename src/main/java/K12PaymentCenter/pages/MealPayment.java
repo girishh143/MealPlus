@@ -20,6 +20,8 @@ public class MealPayment {
     private MobileElement addPaymentSuccessMessage;
     private MobileElement addPaymentOkButton;
     private WebDriverWait wait;
+    private MobileElement addAmount$5Button;
+    private MobileElement addAmount$10Button;
 
     public MealPayment(AndroidDriver driver){
         this.driver=driver;
@@ -57,5 +59,17 @@ public class MealPayment {
         wait.until(ExpectedConditions.visibilityOf(DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDPAYMENT_SUCCESSOKBUTTON"),this.driver)));
         addPaymentOkButton=DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDPAYMENT_SUCCESSOKBUTTON"),this.driver);
         return addPaymentOkButton;
+    }
+
+    public MobileElement getAddAmount$5Button(){
+        wait.until(ExpectedConditions.visibilityOf(DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDAMOUNT_$5BUTTON"),this.driver)));
+        addAmount$5Button=DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDAMOUNT_$5BUTTON"),this.driver);
+        return addAmount$5Button;
+    }
+
+    public MobileElement getAddAmount$10Button(){
+        wait.until(ExpectedConditions.visibilityOf(DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDAMOUNT_$10BUTTON"),this.driver)));
+        addAmount$10Button=DriverHelper.getMobileElement(this.xpaths.get("BY_XPATH_ADDAMOUNT_$10BUTTON"),this.driver);
+        return addAmount$10Button;
     }
 }
