@@ -23,7 +23,6 @@ public class AddStudentPage {
     private MobileElement addStudentSuccessOkButton;
     private WebDriverWait wait;
 
-
     public AddStudentPage(AndroidDriver driver) {
         this.driver = driver;
         wait = new WebDriverWait(this.driver, 90);
