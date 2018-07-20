@@ -42,7 +42,6 @@ public class MealPaymentTest extends BaseTest {
         //     wait.until(ExpectedConditions.visibilityOf(mealPayment.getAddButton()));
        // mealPayment.getAddButton().click();
 
-
     }
 
    /* @Test(description = "Verify the User can add d Payment which is in decimal to the cart", groups = {"MealPayment"}, priority = 1)
