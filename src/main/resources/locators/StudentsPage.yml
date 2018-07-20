@@ -1,1 +1,3 @@
 BY_XPATH_ADDSTUDENT_BUTTON: "XPATH_TBR_//*[@text=' Add Student ']"
+BY_XPATH_EDITSTUDENT_BUTTON: "XPATH_TBR_//*[@class='android.widget.EditText']"
+BY_XPATH_DELETESTUDENT_BUTTON: "XPATH_TBR_//*[@class='android.widget.EditText']"
