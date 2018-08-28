@@ -46,9 +46,9 @@ public class BaseTest {
     public void Login() {
 
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.getUsernameTextbox().sendKeys("dpk");
+        loginPage.getUsernameTextbox().sendKeys("mari");
         driver.hideKeyboard();
-        loginPage.getPasswordTextbox().sendKeys("Dpk@789");
+        loginPage.getPasswordTextbox().sendKeys("Test@1");
         driver.hideKeyboard();
         loginPage.getSignInButton().click();
         WebDriverWait wait;

@@ -1,5 +1,5 @@
 package TestCases;
-
+//package com.test;
 import K12PaymentCenter.BaseTest;
 import K12PaymentCenter.pages.DashboardPage;
 import K12PaymentCenter.pages.MealPayment;
@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
 import java.util.Map;
 
 public class MealPaymentTest extends BaseTest {
@@ -39,13 +40,12 @@ public class MealPaymentTest extends BaseTest {
 
         mealPayment.getAddPaymentOkButton().click();
 
-      //  DashboardPage dashboardPage = new DashboardPage(driver);
-      //  dashboardPage.getSettingsButton().click();
+        driver.runAppInBackground(Duration.ofMillis(2));
+        DashboardPage dashboardPage = new DashboardPage(driver);
+        dashboardPage.getSettingsButton().click();
 
-      //  SettingsPage settingsPage = new SettingsPage(driver);
-     //   settingsPage.getLogoutButton().click();
-
-
+        SettingsPage settingsPage = new SettingsPage(driver);
+        settingsPage.getLogoutButton().click();
     }
 
     @Test(description = "Verify the User can add d Payment which is in decimal to the cart", groups = {"MealPayment"}, priority = 1)
@@ -54,18 +54,26 @@ public class MealPaymentTest extends BaseTest {
 
         MealPayment mealPayment = new MealPayment(driver);
         mealPayment.getAddButton().click();
+        mealPayment.getAddButton().click();
 
         mealPayment.getAddAmountTextbox().sendKeys("20.5");
         driver.hideKeyboard();
 
-        mealPayment.getAddToCartButton().click();
-        mealPayment.getAddToCartButton().click();
+        mealPayment.getUpdateCartButton().click();
+        mealPayment.getUpdateCartButton().click();
 
         String warningText = mealPayment.getAddPaymentSuccessMessage().getText();
         String actualWarning = "Shopping cart has been updated";
         Assert.assertEquals(actualWarning, warningText, "text should match");
 
         mealPayment.getAddPaymentOkButton().click();
+
+        driver.runAppInBackground(Duration.ofMillis(2));
+        DashboardPage dashboardPage = new DashboardPage(driver);
+        dashboardPage.getSettingsButton().click();
+
+        SettingsPage settingsPage = new SettingsPage(driver);
+        settingsPage.getLogoutButton().click();
     }
 
     @Test(description = "Verify the User can add +$5 and +$10 to the amount using the options.", groups = {"MealPayment"}, priority = 2)
@@ -80,18 +88,20 @@ public class MealPaymentTest extends BaseTest {
 
         mealPayment.getAddAmount$5Button().click();
         mealPayment.getAddAmount$5Button().click();
-
         mealPayment.getAddAmount$10Button().click();
-     //   mealPayment.getAddAmount$10Button().click();
+        mealPayment.getUpdateCartButton().click();
 
-        mealPayment.getAddToCartButton().click();
-        mealPayment.getAddToCartButton().click();
         String warningText = mealPayment.getAddPaymentSuccessMessage().getText();
         String actualWarning = "Shopping cart has been updated";
         Assert.assertEquals(actualWarning, warningText, "text should match");
 
         mealPayment.getAddPaymentOkButton().click();
 
-      //  mealPayment.getAddPaymentOkButton().click();
+        driver.runAppInBackground(Duration.ofMillis(2));
+        DashboardPage dashboardPage = new DashboardPage(driver);
+        dashboardPage.getSettingsButton().click();
+
+        SettingsPage settingsPage = new SettingsPage(driver);
+        settingsPage.getLogoutButton().click();
     }
 }
