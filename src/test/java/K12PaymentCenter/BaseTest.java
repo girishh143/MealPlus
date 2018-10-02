@@ -34,6 +34,8 @@ public class BaseTest {
 
         driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), androidCapabilities);
         driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
+        System.out.println("Driver Initialized successfully...!!!");
+        
 
         return driver;
     }
